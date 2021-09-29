@@ -64,9 +64,9 @@ class Rectangle:
         """Method string of a rectangle"""
 
         print_s = ""
-        if self.__width > 0 or self.__height > 0:
-            for i in range(self.__height):
-                for j in range(self.width):
+        if self.__width > 0 and self.__height > 0:
+            for y in range(self.__height):
+                for x in range(self.__width):
                     print_s = print_s + "#"
                 print_s = print_s + "\n"
-        return print_s
+        return print_s[: -1]
