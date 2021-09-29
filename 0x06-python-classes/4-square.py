@@ -16,7 +16,7 @@ class Square:
     def size(self):
         """Method to retrieve"""
         return self.__size
-    
+
     @size.setter
     def size(self,value):
         """Setter method"""
