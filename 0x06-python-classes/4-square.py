@@ -22,7 +22,6 @@ class Square:
 		"""Setter method"""
 		self.__size = value
 
-		""" Exception with the message"""
 		if type(value) is not int:
 			raise TypeError("size must be an integer")
 
