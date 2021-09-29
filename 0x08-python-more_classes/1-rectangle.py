@@ -7,7 +7,6 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize square with the size width and height"""
-
         self.width = width
         self.height = height
 
@@ -20,7 +19,6 @@ class Rectangle:
     def width(self, value):
         """New value for width"""
 
-        """ Exception with the message"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
 
@@ -38,7 +36,6 @@ class Rectangle:
     def height(self, value):
         """New value for width"""
 
-        """ Exception with the message"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
 
