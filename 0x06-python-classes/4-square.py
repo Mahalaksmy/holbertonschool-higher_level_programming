@@ -12,19 +12,19 @@ class Square:
 		"""Public instance method that returns the current square area"""
 		return self.__size * self.__size
 
-    @property
-    def size(self):
-        """Method to retrieve """
-        return self.__size
+	@property
+	def size(self):
+		"""Method to retrieve"""
+		return self.__size
 
-    @size.setter
-    def size(self, value):
-        """Setter method"""
-        self.__size = value
+	@size.setter
+	def size(self,value):
+		"""Setter method"""
+		self.__size = value
 
-        """ Exception with the message"""
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
+		""" Exception with the message"""
+		if type(value) is not int:
+			raise TypeError("size must be an integer")
 
-        if value < 0:
-            raise ValueError("size must be >= 0")
+		if value < 0:
+			raise ValueError("size must be >= 0")
