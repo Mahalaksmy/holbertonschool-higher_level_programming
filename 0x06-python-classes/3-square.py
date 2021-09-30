@@ -1,20 +1,39 @@
 #!/usr/bin/python3
-"""New Class Square"""
+"""Creating a new class called Square"""
 
 
 class Square:
-    """ Aclass Square that defines a square by: (based on 0-square.py)"""
+    """class Square that defines a square by: (based on 1-square.py)"""
     def __init__(self, size=0):
-        """Initialize square with the size"""
+        """Initialize Square with size attribute"""
         self.__size = size
 
-        """ Exception with the message"""
-        if type(size) is not int:
+    def area(self):
+        """Method that returns the current square area"""
+        return self.__size * self.__size
+
+    @property
+    def size(self):
+        """Method to retrieve the size"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """Setting a new value"""
+        self.__size = value
+
+        if type(value) is not int:
             raise TypeError("size must be an integer")
 
-        if size < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
 
-    def area(self):
-        """Public instance method that returns the current square area"""
-        return self.__size * self.__size
+    def my_print(self):
+        """Method that prints the square"""
+        if self.__size > 0:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print("")
+        else:
+            print("")

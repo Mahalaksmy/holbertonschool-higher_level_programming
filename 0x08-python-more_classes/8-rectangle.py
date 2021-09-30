@@ -5,9 +5,13 @@
 class Rectangle:
     """New class rectangle that defines a rectangle:"""
 
+    print_symbol = "#"
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initialize square with the size width and height"""
 
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -62,11 +66,37 @@ class Rectangle:
 
     def __str__(self):
         """Method string of a rectangle"""
-        
+
         print_s = ""
-        if self.__width > 0 or self.__height > 0:
-            for i in range(self.__height):
-                for j in range(self.width):
-                    print_s = print_s + "#"
+        if self.__width > 0 and self.__height > 0:
+            for y in range(self.__height):
+                for x in range(self.__width):
+                    print_s = print_s + str(self.print_symbol)
                 print_s = print_s + "\n"
-        return print_s
+        return print_s[: -1]
+
+    def __repr__(self):
+        """“ A string representation of the rectangle"""
+
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Method for instance of Rectangle is deleted"""
+
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Method that returns the biggest rectangle """
+
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() == rect_2.area():
+            return rect_1
+        if rect_1.area() > rect_2.area():
+            return rect_1
+        else:
+            return rect_2
