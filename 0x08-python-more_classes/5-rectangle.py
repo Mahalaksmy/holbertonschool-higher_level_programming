@@ -76,7 +76,7 @@ class Rectangle:
 
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
-    def __def__(self):
+    def __del__(self):
         """Method for instance of Rectangle is deleted"""
-        
+
         print("Bye rectangle...")
