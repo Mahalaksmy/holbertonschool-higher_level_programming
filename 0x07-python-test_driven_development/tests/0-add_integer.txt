@@ -1,0 +1,48 @@
+=============================
+The ''0-add_integer'' module
+=============================
+
+Using ''add_integer''
+----------------------
+
+Import file
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Correct validations:
+
+Test for two values that are of type integer:
+    >>> add_integer(13, 5)
+    17
+
+Test for two values that are of type integer negative:
+    >>> add_integer(-8, -9)
+    17
+
+Test for two values that are of type integer, a is positive and b is negative:
+    >>> add_integer(20, -5)
+    15
+
+Test for two values, a is 0 and b integer:
+    >>> add_integer(0, 7)
+    7
+
+Test for two values that are floats:
+    >>> add_integer(5.3, 2.1)
+    7
+
+validations with errors:
+
+Test for two values, a string and b integer:
+    >>> add_integer("life", 10)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Test for two values tha are string:
+    >>> add_integer("Carpe", "Diem")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Test for no parametrs:
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: missing arguments in function add_integer()
