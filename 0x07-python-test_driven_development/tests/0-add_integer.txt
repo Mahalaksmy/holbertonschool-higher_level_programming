@@ -12,11 +12,11 @@ Correct validations:
 
 Test for two values that are of type integer:
     >>> add_integer(13, 5)
-    17
+    18
 
 Test for two values that are of type integer negative:
     >>> add_integer(-8, -9)
-    17
+    -17
 
 Test for two values that are of type integer, a is positive and b is negative:
     >>> add_integer(20, -5)
@@ -45,4 +45,4 @@ Test for two values tha are string:
 Test for no parametrs:
     >>> add_integer()
     Traceback (most recent call last):
-    TypeError: missing arguments in function add_integer()
+    TypeError: add_integer() missing 1 required positional argument: 'a'
