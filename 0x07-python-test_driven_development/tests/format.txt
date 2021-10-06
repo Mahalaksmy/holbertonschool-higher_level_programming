@@ -1,0 +1,24 @@
+=============================
+The ''file_Originame'' module
+=============================
+
+Using '' file_name ''
+----------------------
+
+Import file
+    >>> file_name = __import__('file_Originame').file_name
+
+Correct validations:
+
+Test for name:
+    >>> file_name(1, 3)
+    4
+
+
+validations with errors
+
+Test for name:
+    >>> add_integer(NULL)
+    Traceback (most recent call last):
+    NameError: name 'NULL' is not defined
+

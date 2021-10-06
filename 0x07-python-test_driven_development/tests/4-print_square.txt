@@ -1,0 +1,45 @@
+=============================
+The ''4-print_square'' module
+=============================
+
+Using '' print_square ''
+----------------------
+
+Import file
+    >>> print_square = __import__('4-print_square').print_square
+
+Correct validations:
+
+Test for print "#":
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+Test for print "#":
+    >>> n = 3
+    >>> print_square(n)
+    ###
+    ###
+    ###
+
+
+
+validations with errors
+
+Test for string:
+    >>> print_square("hello")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Test case for Size is Negative:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+Test case for Size is Float and < 0:
+    >>> print_square(-4.9)
+    Traceback (most recent call last):
+    TypeError: size must be an integer

@@ -10,13 +10,9 @@ Import file
 
 Correct validations:
 
-Test for one strings:
-    >>> say_my_name("Romeo")
-    My name is Bob
-
 Test for two strings:
     >>> say_my_name("Juan", "Cuadrado")
-    My name is Juan  Cuadrado
+    My name is Juan Cuadrado
 
 validations with errors
 
