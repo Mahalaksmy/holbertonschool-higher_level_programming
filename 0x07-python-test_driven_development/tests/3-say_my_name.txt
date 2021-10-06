@@ -1,0 +1,41 @@
+=============================
+The ''3-say_my_name'' module
+=============================
+
+Using '' say_my_name ''
+----------------------
+
+Import file
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Correct validations:
+
+Test for one strings:
+    >>> say_my_name("Romeo")
+    My name is Bob
+
+Test for two strings:
+    >>> say_my_name("Juan", "Cuadrado")
+    My name is Juan  Cuadrado
+
+validations with errors
+
+Test string and integer:
+    >> say_my_name("Romeo", 25)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+Test string and None:
+    >>> say_my_name("Ariana", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+Test for More than 2 Arguments:
+    >>> say_my_name("Juan", "Leo", "Juliana")
+    Traceback (most recent call last):
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+Test for Empty First Argument:
+    >>> say_my_name(, "Juan")
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
