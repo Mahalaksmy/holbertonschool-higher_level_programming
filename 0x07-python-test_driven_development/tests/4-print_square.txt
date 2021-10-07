@@ -34,6 +34,12 @@ Test for string:
     Traceback (most recent call last):
     TypeError: size must be an integer
 
+Test for string:
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+
 Test case for Size is Negative:
     >>> print_square(-1)
     Traceback (most recent call last):
