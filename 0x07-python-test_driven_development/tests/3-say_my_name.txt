@@ -39,3 +39,8 @@ Test for Empty First Argument:
     >>> say_my_name(, "Juan")
     Traceback (most recent call last):
     SyntaxError: invalid syntax
+
+Test for Empty First Argument no string:
+    >>> say_my_name(None, "Garcia")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
