@@ -26,7 +26,7 @@ Test string and integer:
     TypeError: last_name must be a string
 
 Test for Integer and String:
-    >>> say_my_name(9, "Garcia")
+    >>> say_my_name(3,5, "Garcia")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
@@ -47,4 +47,10 @@ Test for Empty First Argument:
 
     >>> say_my_name(None, "Garcia")
     Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Test for lists and string:
+>>> say_my_name(['Estefania', 'The Best'], 'Acevedo' )
+    Traceback (most recent call last):
+    ...
     TypeError: first_name must be a string
