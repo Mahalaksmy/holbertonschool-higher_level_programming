@@ -25,6 +25,11 @@ Test string and integer:
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
+Test string and integer:
+    >> say_my_name(15, "Garcia")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
 Test string and None:
     >>> say_my_name("Ariana", None)
     Traceback (most recent call last):
