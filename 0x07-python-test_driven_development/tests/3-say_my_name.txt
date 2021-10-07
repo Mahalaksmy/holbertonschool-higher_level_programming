@@ -10,6 +10,10 @@ Import file
 
 Correct validations:
 
+Test for One Argument:
+    >>> say_my_name("Bob")
+    My name is Bob
+
 Test for two strings:
     >>> say_my_name("Juan", "Cuadrado")
     My name is Juan Cuadrado
