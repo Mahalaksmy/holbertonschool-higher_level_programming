@@ -11,8 +11,8 @@ Import file
 Correct validations:
 
 Test for One Argument:
-    >>> say_my_name("Bob")
-    My name is Bob
+    >>> say_my_name("Jeronimo")
+    My name is Jeronimo
 
 Test for two strings:
     >>> say_my_name("Juan", "Cuadrado")
@@ -25,16 +25,11 @@ Test string and integer:
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
-Test string and integer:
-    >> say_my_name(15, "Garcia")
+Test for Integer and String:
+    >>> say_my_name(9, "Garcia")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-Test for Integer and String:
-    >>> say_my_name(4, "Machine")
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
-    
 Test string and None:
     >>> say_my_name("Ariana", None)
     Traceback (most recent call last):
