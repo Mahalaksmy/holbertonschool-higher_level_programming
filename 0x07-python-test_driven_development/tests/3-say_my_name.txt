@@ -25,6 +25,11 @@ Test string and integer:
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
+>>> say_my_name(['Estefania', 'The Best'], 'Acevedo' )
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
 Test for Integer and String:
     >>> say_my_name(3.5, "Garcia")
     Traceback (most recent call last):
