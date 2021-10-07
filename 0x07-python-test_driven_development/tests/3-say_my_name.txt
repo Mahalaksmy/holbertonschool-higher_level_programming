@@ -30,6 +30,11 @@ Test string and integer:
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
+Test for Integer and String:
+    >>> say_my_name(4, "Machine")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+    
 Test string and None:
     >>> say_my_name("Ariana", None)
     Traceback (most recent call last):
@@ -45,7 +50,6 @@ Test for Empty First Argument:
     Traceback (most recent call last):
     SyntaxError: invalid syntax
 
-Test for Empty First Argument no string:
     >>> say_my_name(None, "Garcia")
     Traceback (most recent call last):
     TypeError: first_name must be a string
