@@ -17,8 +17,8 @@ def pascal_triangle(n):
                 if(j == 0):
                     pascal_triangle[i].append(1)
                 else:
-                    pascal_triangle[i].append(pascal_triangle[i-1][j]
-                                              + pascal_triangle[i-1][j-1])
+                    pascal_triangle[i].append(pascal_triangle[i-1]
+                                              [j] + pascal_triangle[i-1][j-1])
             elif(j == i):
                 pascal_triangle[i].append(1)
     return pascal_triangle
