@@ -15,7 +15,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-    
+
     @property
     def width(self):
         """width getter"""
@@ -75,34 +75,34 @@ class Rectangle(Base):
     def area(self):
         """ This method returns
         the area value of the Rectangle instance."""
-        
+
         return self.width * self.height
-    
+
     def display(self):
         """" This method  that prints
         in stdout the Rectangle instance with the character #"""
-        
+
         print("\n" * self.__y)
         for i in range(self.__height):
             print(" " * self.__x, end="")
             for j in range(self.__width):
                 print("#", end="")
             print('')
-    
+
     def __str__(self):
         """ This a Method that returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        
+
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x,
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
-    
+
     def update(self, *args, **kwargs):
         """This method assigns an argument
         to each attribute"""
-        
+
         if args:
             if len(args) >= 1:
                 self.id = args[0]
