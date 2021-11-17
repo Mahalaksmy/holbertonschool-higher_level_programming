@@ -3,7 +3,8 @@
 that inherits from Rectangle"""
 
 from models.rectangle import Rectangle
-
+import json
+from os.path import isfile
 
 class Square(Rectangle):
     """Class Square that inherits
