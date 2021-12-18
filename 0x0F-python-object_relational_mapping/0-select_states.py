@@ -1,22 +1,18 @@
 #!/usr/bin/python3
 """
-his is a  a script that lists all states from the database hbtn_0e_0_usa
+This is a  a script that lists all states from the database hbtn_0e_0_usa
 """
 
 import MySQLdb
-from sys import argv
+import sys
 
 if __name__ == "__main__":
 
-    mysql_username = argv[1]
-    mysql_password = argv[2]
-    database_name = argv[3]
-
     conn = MySQLdb.connect(host="localhost",
                            port=3306,
-                           user=mysql_username,
-                           passwd=mysql_password,
-                           db=database_name,
+                           user=sys.argv[1],
+                           passwd=sys.argv[2],
+                           db=sys.argv[3],
                            charset="utf8")
     cur = conn.cursor()
 
