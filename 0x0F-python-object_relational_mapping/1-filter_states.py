@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-his is a  a script that lists all states from the database hbtn_0e_0_usa
+This is a script that lists all states with a name
+starting with N (upper N) from the database hbtn_0e_0_usa
 """
 
 import MySQLdb
@@ -20,7 +21,8 @@ if __name__ == "__main__":
                            charset="utf8")
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
+    cur.execute("""SELECT * FROM states WHERE name LIKE'N%'
+                      ORDER BY states.id;""")
 
     query_rows = cur.fetchall()
 
