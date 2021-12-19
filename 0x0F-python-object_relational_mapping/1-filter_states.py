@@ -15,8 +15,8 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
 
-    cur.execute("""SELECT * from states WHERE name LIKE BINARY 'N%'
-    ORDER BY id ASC""")
+    cur.execute("SELECT * from states WHERE name LIKE 'N%'
+    ORDER BY id ASC")
 
     query_rows = cur.fetchall()
 
