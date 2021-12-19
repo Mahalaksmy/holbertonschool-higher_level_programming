@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Write a script that takes in an argument and displays all
-values in the states table of hbtn_0e_0_usa where name matches the argument
+Write a script that lists all states with a name starting with N
+(upper N)from the database hbtn_0e_0_usa:
 """
 
 import MySQLdb
@@ -16,8 +16,8 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
 
-    cur.execute("""SELECT id, name FROM states WHERE name LIKE BINARY '{}'
-                      ORDER BY states.id;""".format(sys.argv[4]))
+    cur.execute("SELECT * from states WHERE name LIKE 'N%'ORDER BY id ASC")
+
     query_rows = cur.fetchall()
 
     for row in query_rows:
