@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+""" This is a Python script that  takes in a URL,
+ and displays the value of the variable
+X-Request-Id in the response header"""
+
+
+import requests
+import sys
+
+if __name__ == "__main__":
+    request = requests.get(sys.argv[1])
+    print(request.headers.get("X-Request-Id"))
