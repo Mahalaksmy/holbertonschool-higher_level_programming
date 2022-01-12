@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is a Python script that takes your GitHub credentials 
+""" This is a Python script that takes your GitHub credentials
 and uses the GitHub API to display your id"""
 
 import requests
