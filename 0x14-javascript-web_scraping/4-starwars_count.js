@@ -9,8 +9,8 @@ request(url, (err, response, body) => {
     const data = JSON.parse(body);
     let i = 0;
 
-    for (const movie of data.results) {
-      for (const char of movie.characters) {
+    for (const film of data.results) {
+      for (const char of film.characters) {
         if (char.endsWith('18/')) {
           i++;
         }
