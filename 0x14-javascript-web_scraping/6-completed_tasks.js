@@ -10,9 +10,9 @@ request(url, (err, resp, body) => {
 
   for (let i = 0; i < todo.length; i++) {
     const user_Id = todo[i].user_Id;
-    const Status = todo[i].completed;
+    const taskStatus = todo[i].completed;
 
-    if (Status === true) {
+    if (taskStatus === true) {
       if (!data[user_Id]) {
         data[user_Id] = 1;
       } else {
